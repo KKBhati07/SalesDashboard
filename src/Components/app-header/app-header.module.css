@@ -1,0 +1,46 @@
+.appHeader {
+    z-index: 10000;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #282c34;
+    color: white;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.appName {
+    margin: 0;
+}
+
+.headerLink {
+    color: white;
+    text-decoration: none;
+}
+
+.headerLink h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.navLinks {
+    display: flex;
+    gap: 15px;
+}
+
+.navLink {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navLink:hover {
+    text-decoration: underline;
+}

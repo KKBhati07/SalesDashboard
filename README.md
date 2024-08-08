@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Sales Dashboard Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The Sales Dashboard application provides an interactive platform for visualizing and analyzing sales data. It includes features for comparing sales across different dates, viewing sales data for today, and presenting detailed data in both graphical and tabular formats.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Sales Comparison Dashboard**: Compare sales data between two selected dates with visual charts and a data grid.
+- **Today's Sales Dashboard**: View and analyze sales data for the current date.
+- **Bar Charts**: Visualize sales data for products and categories using Bar charts.
+- **Data Grid**: Display detailed sales data in a sortable and filterable table.
+- **Date Selection**: Allows users to select date ranges for sales comparison.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technology Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**: React, Chart.js, ag-Grid, React DatePicker
+- **Styling**: CSS Modules
+- **Data Handling**: Fetch API
+- **State Management**: React's `useState` and `useEffect` hooks
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js
+- npm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Clone the Repository
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone git@github.com:KKBhati07/SalesDashboard.git
+cd sales-dashboard-app
+npm install
+npm start
+````
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Project Documentation
 
-### `npm run eject`
+## Components
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. `AppHeaderComponent`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Purpose**: Displays the header with navigation links.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2. `AppHomeComponent`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Purpose**: Provides a welcome message and navigation options.
 
-## Learn More
+### 3. `ComparisonDashboardComponent`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Purpose**: Displays sales data comparison between two selected dates.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## State
 
-### Code Splitting
+- **`startDate`**: Selected start date.
+- **`endDate`**: Selected end date.
+- **`comparisonData`**: Data fetched from the API.
+- **`filteredData`**: Data filtered based on the selected date range.
+- **`isLoading`**: Loading state to show or hide the spinner.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Data Fetching
 
-### Analyzing the Bundle Size
+Data is fetched from a mock API and processed for charts and grid data.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### 3. `SalesDashboardComponent`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Purpose**: Displays today's sales data.
 
-### Advanced Configuration
+## State
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **`productLevelChart`**: Chart data for products.
+- **`categoryLevelChart`**: Chart data for categories.
+- **`tableData`**: Data for the grid.
+- **`columns`**: Column definitions for the grid.
+- **`isLoading`**: Loading state to show or hide the spinner.
 
-### Deployment
+## Data Fetching
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Data is fetched from a mock API and processed for charts and grid data.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
